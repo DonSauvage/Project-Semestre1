@@ -1,0 +1,95 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>D&D Noobz</title>
+    <link rel="stylesheet" href="css/style.css" />
+    
+</head>
+
+<body onload="init(addRace(), addClass())">
+    <div id="header">
+        <h1> Dungeons & Dragons Noobz </h1>
+    </div>
+    <div id="menu">
+        <nav>
+            <a href="index.html"> Main Page </a>&nbsp;
+            <a href="characters.html"> Character Creation </a>&nbsp;
+        </nav>
+    </div>
+    <div id="intro">
+        <h1>Here you will be able to created your own character.</h1>
+        <p>How it works : </p>
+        <p>Once you click on "Alright Mate" : The program will create 4 random numbers 6 times and add them into an array. <br> Then it will calculate the sum of each array. <br> 
+            Each array will now represent each one of your stats (str, dex, int, etc)<br> After that, 2 bonuses will be added, depending on the class and race you have chosen. <br>
+        If for example you have chosen a Dwarf Fighter your bonuses will be : str +2, dex -2, con +3, int +0, wis +2, char +0</p>
+    
+    
+    
+    <div id="formulaire">
+        <form name="form">
+            <fieldset id="field" action="#">
+                <label for="charName">Choose your character name:</label><br>
+                <input type="text" id="fname" name="fname" value="" required> <button onclick="return namaeWa();">Generate random name</button><br><br>
+                <label for="age"> Choose your age:</label><br>
+                <input type="text" id="fage" name="fage" value="" required><button onclick="return ages();">Generate random age</button><br><br>
+                <label for="gender">Choose your gender</label>
+                <select name="gender" id="gender">
+                    <option>Male</option>
+                    <option>Female</option>
+                </select><br><br>
+                <label for="race">Choose a race</label>
+                <select name="race" id="race">
+
+                
+                    
+                </select><br><br>
+
+
+                <label for="class">Choose your class</label>
+                <select name="class" id="class">
+                    
+                </select>
+                <p>The race, class and gender you choose affect your stats and the age generator. <br> 
+                    (These are only the basic races from the player's handbook)</p><br>
+                <button id="send" class="button" onclick="return envoyer(this)">Alright mate</button>
+                <div id="table">
+
+                    <table>
+                        <thead name="thead">
+                            <tr>
+                            <th>Strength</th>
+                            <th>Dexterity</th>
+                            <th>Constitution</th>
+                            <th>Intelligence</th>
+                            <th>Wisdom</th>
+                            <th>Charisma</th>
+                        </tr>
+                        </thead>
+            
+                        <tbody >
+                          <tr id="tbody">
+
+                          </tr>
+                        </tbody>
+                    </table>
+            
+                </div>
+                <div id="additionHTML">
+                    
+                </div>
+            </fieldset>
+        </form>
+    </div>
+</div>
+
+    
+
+    
+
+    
+    <script  src="js/script.js"> </script>
+</body>
+
+</html>
